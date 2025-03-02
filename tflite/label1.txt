@@ -1,0 +1,3 @@
+0: Anggora
+1: Persia
+2: Kampung
