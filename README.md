@@ -1,48 +1,35 @@
-# Klasifikasi Gambar Kucing
+# **Klasifikasi Gambar Kucing🐈🐈‍⬛**  
 
-Proyek ini bertujuan untuk melakukan klasifikasi gambar kucing ke dalam tiga kategori: **Anggora**, **Persia**, dan **Kampung**. Model ini menggunakan **Convolutional Neural Networks (CNN)** untuk menganalisis dan mengklasifikasikan gambar berdasarkan kategori yang diberikan.
+Proyek ini bertujuan untuk mengklasifikasikan gambar kucing ke dalam beberapa jenis berdasarkan ciri-ciri visualnya. Prosesnya dimulai dengan mengambil dataset gambar, lalu dilakukan beberapa tahap seperti pengolahan gambar, pelatihan model, dan evaluasi hasil.  
 
-## Struktur Dataset
+Gambar-gambar yang digunakan terlebih dahulu diproses agar lebih siap digunakan dalam model, seperti diubah ukurannya dan diberi variasi tambahan agar model bisa mengenali pola dengan lebih baik. Setelah itu, model dilatih menggunakan contoh gambar yang sudah dikategorikan, sehingga bisa mempelajari perbedaan antar jenis kucing.  
 
-Dataset terdiri dari tiga kelas gambar:
-- **Anggora**
-- **Persia**
-- **Kampung**
+Setelah model selesai dilatih, dilakukan pengujian untuk melihat seberapa baik model bisa mengenali gambar baru. Hasil evaluasi menunjukkan seberapa akurat model dalam mengklasifikasikan gambar, serta area yang masih bisa ditingkatkan.  
 
-Gambar-gambar tersebut terstruktur dalam folder masing-masing sesuai dengan kelasnya dan digunakan untuk pelatihan, validasi, dan pengujian model.
+Proyek ini bisa berguna untuk berbagai keperluan, seperti membantu identifikasi jenis kucing dalam penelitian atau aplikasi lain yang memerlukan pengenalan gambar hewan.  
 
-## Arsitektur Model
-
-Model yang digunakan dalam proyek ini adalah **Convolutional Neural Network (CNN)**, yang dilatih dengan beberapa lapisan konvolusi, lapisan pooling, serta lapisan fully connected untuk menghasilkan prediksi berdasarkan gambar input.
-
-Model ini juga menggunakan **Batch Normalization** dan **Dropout** untuk meningkatkan kinerja dan mengurangi overfitting.
-
-## Proses Pelatihan
-
-Model dilatih menggunakan dataset gambar dengan menggunakan **ImageDataGenerator** dari Keras untuk menghasilkan data batch secara otomatis. Penggunaan **class_weight** juga diterapkan untuk mengatasi ketidakseimbangan jumlah gambar antar kelas.
-
-Model dilatih selama beberapa epoch, dan proses pelatihan dapat dihentikan lebih awal jika tidak ada peningkatan pada **validation loss**.
-
-## Evaluasi Model
-
-Setelah model dilatih, model dievaluasi menggunakan data uji dan menghasilkan metrik seperti **accuracy**, **precision**, **recall**, dan **f1-score** untuk masing-masing kelas. Hasil evaluasi disajikan dalam bentuk **confusion matrix** dan **classification report**.
-
-## Instalasi
-
-1. Clone repositori ini:
+## **Cara Menjalankan**  
+1. Pastikan semua dependensi sudah terinstall. Jika belum, jalankan perintah berikut untuk menginstalnya:  
    ```bash
-   git clone <repo_url>
-pip install -r requirements.txt
+   pip install -r requirements.txt
+   ```  
+2. Jika ingin menyimpan daftar dependensi yang digunakan dalam proyek ini, bisa menjalankan:  
+   ```bash
+   pip freeze > requirements.txt
+   ```  
 
-Dataset/
-├───train/
-│   ├───Anggora/
-│   ├───Persia/
-│   └───Kampung/
-├───validation/
-│   ├───Anggora/
-│   ├───Persia/
-│   └───Kampung/
-└───test/
-```
-
+## **Struktur Folder**  
+````  
+submission  
+├───tfjs_model  
+│   ├───group1-shard1of1.bin  
+│   └───model.json  
+├───tflite  
+│   ├───model_1.tflite  
+│   └───label1.txt  
+├───saved_model  
+│   ├───model_1.h5   
+├───notebook.ipynb  
+├───README.md  
+└───requirements.txt  
+````  
